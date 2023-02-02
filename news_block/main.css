@@ -1,0 +1,25 @@
+
+.news-block{
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    background-color: #d3d3d347;
+    border-radius: 8px;
+    padding: 2%;
+}
+
+.news-block-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+p{
+margin: 0;
+width: 25%;
+font-weight: 700;
+}
+a{
+    width: 75%;
+}
+
+

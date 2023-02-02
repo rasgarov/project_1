@@ -1,0 +1,52 @@
+.credit-card {
+
+    background-color: #833ae0;
+    width: 315px;
+    height: 200px;
+    border-radius: 10px;
+    color:white;
+    /* 
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    margin-top: 15%; */
+}
+
+.credit-card-img {
+ 
+    width: 58px;
+    height: 64px;
+    margin-top: 22px;
+    margin-left: 6px;   
+}
+
+.credit-card-number {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    margin-top: -3px;
+    margin-left: 14px;
+    /* display: inherit;
+    font-size: 140%;
+    
+    width: 100%; */
+}
+.credit-card-name{
+    font-weight: 700; 
+    font-family: monospace;
+    font-size: 22px;
+    margin-left: 14px;
+    margin-top: -23px;
+}
+.credit-card-date-text{
+    margin-left: 14px;
+    margin-top: -8px;
+    font-size: 10px;
+}
+.credit-card-date{
+    margin-left: 14px;
+    margin-top: -8px;
+    font-family: 'Tahoma, Geneva, Verdana, sans-serif';
+}
