@@ -8,5 +8,4 @@ randButton.addEventListener("click", function () {
     const nameByIndex = namesArr[index];
     document.querySelector("p span").innerText = nameByIndex;
     namesArr.splice(index, 1);
-
 })
