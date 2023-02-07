@@ -1,0 +1,28 @@
+.text{
+    background-color: aqua !important;
+}
+p{
+    background-color:bisque;
+}
+#metn{
+    background-color:black;
+}
+
+p.text{
+    background-color:cadetblue;
+}
+.parent{
+height: 60vh;
+background-color: blue;
+display: flex;
+/* align-items: center; */
+
+
+
+}
+.child{
+    
+    width: 200px;
+    height: 200px;
+background-color: red;
+}

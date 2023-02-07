@@ -1,0 +1,31 @@
+.body{
+    margin: 0;
+}
+.container{
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    background-color: cornflowerblue;
+}
+.block, .block2, .block3{
+    width:33%;
+    height:40vh;
+    background-color: bisque;
+    color: black;
+    margin:1% auto;
+}
+p{
+    padding: 7%;
+}
+@media (max-width: 960px){
+    .block, .block2, .block3{
+        width:90%;
+        margin-top: 1%;
+        min-height: 400px;
+       
+    }
+    .container{
+        flex-direction: column;
+       
+    }
+}

@@ -1,0 +1,52 @@
+<!-- JUSTIFY-CONTENT -->
+<!-- justify-content:flex-start; - from left to right -->
+<!-- justify-content:center; - in top center -->
+<!-- justify-content:flex-end; - at the end of row -->
+<!-- justify-content:space-between; - spaces between content -->
+<!-- justify-content:space-around; - spaces at the start, between and end of the content -->
+<!-- justify-content:space-evenly; - same px space at the start, between and end of the content -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .cont div {
+
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div style="background-color: blue;">1</div>
+        <div style="background-color: red;">2</div>
+        <div style="background-color: green;">3</div>
+        <div style="background-color: blue;">1</div>
+        <div style="background-color: red;">2</div>
+        <div style="background-color: green;">3</div>
+        <div style="background-color: blue;">1</div>
+        <div style="background-color: red;">2</div>
+        <div style="background-color: green;">3</div>
+        <div style="background-color: blue;">1</div>
+        <div style="background-color: red;">2</div>
+        <div style="background-color: green;">3</div>
+
+
+
+    </div>
+</body>
+
+</html>

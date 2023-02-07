@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="block-percent">
+            <!-- width:80%; - % >> Parent element width -->
+            <!-- height:80%; - % >> Parent element height -->
+        </div>
+        <div class="block-vw">
+            <!-- width:80vw; - VW >> Viewport's width >> From browser screen width -->
+            <!-- height:80vh; - VH >> Viewport's hight >> From browser screen hight -->
+        </div>
+
+        <!-- 
+        vh - browser height
+        vw - browser width
+        % - parent element percent
+        em - element font-size * em = pixel (
+            font-size: 10px;
+            width: 4em;
+            )  
+            width >> 10px * 4em = 40 px
+         rem - browser font-size * rem = pixel (
+            width: 4rem;
+            )  
+            width >> browser font size * 4rem = 40 px
+        calc - for calculate definitely size
+        (
+            height: calc(100vh - 300px); >> size of element is smaller than 100 browser height - 300 px
+        )
+        -->
+
+    </div>
+</body>
+
+</html>

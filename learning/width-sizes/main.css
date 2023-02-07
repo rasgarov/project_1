@@ -1,0 +1,23 @@
+body{
+    margin:0;
+}
+.container{
+width: 80%;
+height:900px;
+/* min-width: 600px; */
+background-color: chocolate;
+}
+.block-percent{
+/* width: 50%;
+height: 100%; */
+/* min-width: 200px;
+max-width: 400px; */
+background-color: red;
+}
+.block-vw{
+    width: 50vw;
+    height: 100vh;
+    /* min-width: 200px;
+    max-width: 400px; */
+    background-color: green;
+    }
