@@ -551,8 +551,462 @@
 // })
 // console.log(...newArr);
 
+////10 
+// const arrNums2 = [2, 4, 1, 3, 9, 6, 7, 5, 8];
+// const arrNames2 = ["Esalo", "Abune", "Deletur", "Basaloq", "Cinnamon", "Gerrard", "Falanor"];
+// const arrNums = [...arrNums2];
+// const arrNames = [...arrNames2];
+// const newAZnums = arrNums.sort((a, b) => a - b);
+// console.log(newAZnums);
+// const newZAnums = arrNums.sort((a, b) => b - a);
+// console.log(newZAnums);
+// const newAZnames = arrNames.sort((a, b) => b > a ? -1 : 0);
+// console.log(newAZnames);
+// const newZAnames = arrNames.sort((a, b) => a > b ? -1 : 0);
+// console.log(newZAnames);
+// console.log(`old ${arrNums2},${arrNames2}`);
+
 
 //#endregion
+
+//#region Objects Basics
+////1 Creating objects and using
+////////1.1
+// const userObj = {
+//     name: 'Rashid',
+//     surname: 'Asgarov',
+//     level: 78,
+//     isBanned: false,
+//     dateOfBirth: '12/08/1996'
+// };
+// console.log(`${userObj.surname} ${userObj.name} adli istifadecinin leveli ${userObj.level}.`);
+
+////////1.2
+// const userObj = {
+//     "istifadeci adi": 'Rashid',
+//     "istifadeci soyadi": 'Asgarov',
+//     "istifadeci leveli": 78,
+//     "istifadeci ban olubmu": false,
+//     "istifadeci dogum tarixi": '12/08/1996'
+// };
+// console.log(`${userObj["istifadeci soyadi"]} ${userObj["istifadeci adi"]} adli istifadecinin leveli ${userObj["istifadeci leveli"]}.`);
+
+////////1.3
+// const userObj = {
+//     "istifadeci adi": 'Rashid',
+//     "istifadeci soyadi": 'Asgarov',
+//     "istifadeci leveli": 78,
+//     "istifadeci ban olubmu": false,
+//     "istifadeci dogum tarixi": '12/08/1996',
+//     userAddress: {
+//         zip: 'AZ0100',
+//         locate: 'Haydar Aliyev ave.',
+//         home: 74
+//     }
+// };
+// console.log(userObj.userAddress.zip);
+
+////////1.4 Adding new param to Object
+// const userObj = {
+//     name: 'Rashid',
+//     surname: 'Asgarov',
+//     level: 78,
+//     isBanned: false,
+//     dateOfBirth: '12/08/1996'
+// };
+// console.log(userObj.status);//undefined
+// userObj.status = "enabled";
+// console.log(userObj.status);//enabled
+
+////////1.5 Mutiple users in obj array
+// const users = [
+//     {
+//         id: 1,
+//         name: "Rashid",
+//         phone: 994997087828
+//     },
+//     {
+//         id: 2,
+//         name: "Tarana",
+//         phone: 994559992408
+//     },
+//     {
+//         id: 3,
+//         name: "Nurlana",
+//         phone: 994997087848
+//     }
+// ];
+// console.log(users[0].name, users[1].name, users[2].name);
+
+////////1.6 Deleting property in obj
+// const users = {
+//     id: 1,
+//     name: "Rashid",
+//     phone: 994997087828
+// };
+// console.log(`Below is shown user details:\n
+// id: ${users.id}\n
+// name: ${users.name}\n
+// phone: ${users.phone}
+// `);
+// delete users.phone;
+// console.log(users);
+
+////2 Tasks to Objects
+////////2.1
+// const person = {
+//     name: "Rashid",
+//     gender: "Male",
+//     birthday: "08/12/1996"
+// };
+// console.log(person.birthday);
+
+////////2.2
+// const userDetails = {
+//     name: 'Asgarov Rashid',
+//     level: 78,
+//     colorsLiked: ['black', 'red'],
+//     dob: '08/12/1996'
+// };
+// userDetails.age = 28;
+// delete userDetails.dob;
+// console.log(userDetails);
+
+////3 Using methods(functions) in Objects
+////////3.1
+// const stul = {
+//     ayaqSayi: 4,
+//     reng: 'qara',
+//     parcha: 'deri',
+//     firma: 'ikea',
+//     qiymet: 100,
+//     ucuzlashdirOnManat() {
+//         stul.qiymet -= 10;
+//     },
+//     bahalashdirOnManat() {
+//         stul.qiymet += 10;
+//     }
+// };
+// console.log(stul.qiymet);
+// stul.ucuzlashdirOnManat();
+// console.log(stul.qiymet);
+// stul.ucuzlashdirOnManat();
+// console.log(stul.qiymet);
+// stul.bahalashdirOnManat()
+// console.log(stul.qiymet);
+
+////4 Using This in function in Objects
+// const user = {
+//     name: 'Rashid',
+//     age: 27,
+//     isBanned: false,
+//     getData() {
+//         console.log(`
+//         Userin adi: ${this.name}
+//         Userin yashi: ${this.age}
+//         User ban olunubmu: ${this.isBanned == true ? 'Beli' : 'Xeyr'}
+//         `);
+//     },
+//     changeName(nam) {
+//         this.name = nam;
+//     }
+// };
+// console.log(user.name); //Rashid
+// user.changeName("Cavad");
+// console.log(user.name); //Cavad
+
+////5 Tasks to Objects PART - 2
+// const user = {
+//     name: 'Rashid',
+//     age: 27,
+//     isBanned: false,
+//     setAge(age) {
+//         this.age = age;
+//         return this.age;
+//     },
+//     getYearsBeforeRetirement() {
+//         const retirementAge = 65;
+//         const leftYears = retirementAge - this.age;
+//         this.leftYears = leftYears;
+//         return this.leftYears;
+//     }
+// }
+// console.log(user);
+// console.log(`
+// ${user.getYearsBeforeRetirement()}
+// `);//38
+// console.log(`
+// ${user.setAge(64)}
+// `);//64
+// console.log(`
+// ${user.getYearsBeforeRetirement()}
+// `);//1
+
+////6 Task to reverse strings in text if string length is more than or equal to 5
+// function newReverseBigStrings(text) {
+//     let newWord = "";
+//     const arr = text.split(' ');
+//     arr.forEach((item, index) => {
+//         if (arr[index].length < 5) {
+//             newWord += arr[index];
+//             newWord += " ";
+//         }
+//         if (arr[index].length >= 5) {
+//             for (let i = arr[index].length - 1; i >= 0; i--) {
+//                 newWord += arr[index][i];
+//             }
+//             newWord += " ";
+//         }
+//     });
+//     return newWord;
+// }
+// console.log(newReverseBigStrings("Salamlar bir defe de duzunu denen de."));
+
+
+
+//#endregion
+
+//#region Classes Basics
+
+
+////1
+// class Telebe {
+//     name;
+//     surname;
+//     age;
+
+// }
+// const telebe1 = new Telebe();
+// telebe1.age = 27;
+// telebe1.name = "Rashid";
+// telebe1.surname = "Asgarov";
+// telebe1.colors = ["red", "green", "blue"];
+// console.log(telebe1);
+
+////2
+// class Telebe {
+//     constructor(age2, name2, surname2) {
+//         this.age = age2;
+//         this.name = name2;
+//         this.surname = surname2;
+//         this.colors = ["red", "green", "blue"];
+//     }
+// }
+// const telebe1 = new Telebe(27, "Rashid", "Asgarov");
+// console.log(telebe1);
+
+////3 Using Methods in Classes
+// class Car {
+//     constructor(price, mark, year) {
+//         this.price = price;
+//         this.mark = mark;
+//         this.year = year;
+//         this.firm = "Chevrolet"
+//     }
+//     decreasePriceOneHundred() {
+//         this.price -= 100;
+//     }
+// }
+// const mashin1 = new Car(3000, "Cruze", 2023);
+// console.log(mashin1.price);
+// mashin1.decreasePriceOneHundred();
+// console.log(mashin1.price);
+
+////4 Self training classes
+// class Person {
+//     constructor(fullName, age, birthPlace) {
+//         this.fullName = fullName;
+//         this.age = age;
+//         this.birthPlace = birthPlace;
+//     }
+//     decreaseAge() {
+//         this.age -= 20;
+//     }
+// }
+// class ARTO extends Person {//Inheritance
+//     constructor(fullName, age, birthPlace, departments, openDate) {
+//         super(fullName, age, birthPlace);
+//         this.departments = departments;
+//         this.openDate = openDate;
+//     }
+//     decreaseAge() {//Polymorphism
+//         this.age -= 10;
+//     }
+// }
+// class Developer extends ARTO {
+//     constructor(salary, fullName, age, birthPlace, departments, openDate, workYears) {
+//         super(fullName, age, birthPlace, departments, openDate);
+//         this.salary = salary;
+//         this.workYears = workYears;
+//     }
+//     decreaseAge() {//Polymorphism
+//         this.age -= 5;
+//     }
+// }
+// const dev1 = new Developer(3000, "Rashid Asgarov", 27, "Azerbaijan", "IT", "13/02/2023", 31);
+// console.log(dev1);
+// dev1.decreaseAge();
+// console.log(dev1);
+
+////5 Encapsulation
+////////5.1
+// class Car {
+//     constructor(model_, maxSpeed_, company_) {
+//         let model = model_;
+//         let maxSpeed = maxSpeed_;
+//         let company = company_;
+//         this.setCompany = (companyName) => {
+//             company = companyName;
+//         }
+//         this.getCompany = () => {
+//             return company;
+//         }
+//         this.setMaxSpeed = (newSpeed) => {
+//             maxSpeed = newSpeed;
+//         }
+//         this.getMaxSpeed = () => {
+//             return maxSpeed;
+//         }
+//         this.setModel = (newModel) => {
+//             model = newModel;
+//         }
+//         this.getModel = () => {
+//             return model;
+//         }
+//     }
+// }
+
+// const mashin1 = new Car();
+// mashin1.setCompany("CHEVROLET");
+// mashin1.setMaxSpeed(220);
+// mashin1.setModel("Cruze");
+// console.log(`${mashin1.getCompany()} / ${mashin1.getModel()} / ${mashin1.getMaxSpeed()}`);
+
+////////5.2
+// class Room {
+//     constructor(windowQuantity, wallpaperColor, roomSize) {
+//         this.windowQuantity = windowQuantity;
+//         this.wallpaperColor = wallpaperColor;
+//         let roomSizeD = roomSize;
+//         this.setRoomSizeD = (size, role) => {
+//             if (role == "admin") {
+//                 roomSizeD = size;
+//             } else {
+//                 return 'you don not have access';
+//             }
+
+//         }
+//         this.getRoomSizeD = () => {
+//             return roomSizeD;
+//         }
+//     }
+// }
+
+// const otaq = new Room(3, "red");
+// console.log(otaq.setRoomSizeD(64, "user"));
+
+////6 Task 1,2
+// class Person {
+//     constructor(surname, name, age, gender) {
+//         this.surname = surname;
+//         ////variant-1
+//         // this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//         ////variant-2
+//         let nameMeth = name;
+//         this.setName = (nameNew) => {
+//             nameMeth = nameNew;
+//         }
+//         this.getName = () => {
+//             return nameMeth;
+//         }
+//     }
+//     ////variant-1
+//     // rename(ad) {
+//     //     this.name = ad;
+//     // }
+// }
+// class Admin extends Person {
+//     constructor(surname, name, age, gender, role, id) {
+//         super(surname, name, age, gender);
+//         this.role = role;
+//         this.id = id;
+//     }
+// }
+// class Player extends Admin {
+//     constructor(surname, name, age, gender, role, id, level) {
+//         super(surname, name, age, gender, role, id);
+//         this.level = level;
+//     }
+// }
+// const person1 = new Person("Asgarov", "Rashid", 27, "Male");
+// const admin1 = new Admin("Zeynalov", "Isa", 26, "Male", "admin-role", 1);
+// const player1 = new Player("Haciyev", "Efqan", 25, "Male", "admin-role", 1, 78);
+// ////variant-1
+// // player1.rename("Ziya");
+// // console.log(person1.name);
+// // console.log(admin1.name);
+// // console.log(player1.name);
+
+// ////variant-2
+// player1.setName("Ziya");
+// console.log(person1.getName());
+// console.log(admin1.getName());
+// console.log(player1.getName());
+
+
+//#endregion
+
+//#region JS Basics Tasks
+
+
+////1
+// const headingToDelete = document.querySelector("h1");
+// headingToDelete.remove();
+// const unorderedList = document.querySelector("ul");
+// const newLiElement = document.createElement("li");
+// newLiElement.textContent = "TITAN RTX";
+// unorderedList.childNodes[3].appendChild(newLiElement);//insert into 3rd child
+// unorderedList.insertBefore(newLiElement, unorderedList.firstChild);//insert at beginning
+
+////2
+// const headingText = document.querySelector("h1");
+// headingText.textContent = "GeForce 20 Series";
+// const getLiWithSpecifiedClass = document.querySelectorAll(".primary");
+// getLiWithSpecifiedClass.forEach((item, index) => {
+//     getLiWithSpecifiedClass[index].style.backgroundColor = "#ebebeb";
+// })
+
+////3
+// const getFirstLi = document.querySelector("ul").childNodes[1];//1
+// const getFirstLi = document.querySelector("ul").firstElementChild;//2
+// console.log(getFirstLi.textContent);
+
+////4
+// console.log(document.querySelector("ul").parentElement);
+// console.log(document.querySelector("ul").previousElementSibling);
+// console.log(document.querySelector("ul").children);
+// console.log(document.querySelector("ul").firstElementChild);
+
+////5
+// const myList = document.querySelectorAll("li");
+// myList.forEach((item, index) => {
+//     myList[index].classList.add("item");
+//     if (!myList[index].classList.contains("primary")) {
+//         myList[index].classList.add("secondary");
+//     }
+// })
+
+////6
+// const myButton = document.querySelector("button");
+// myButton.onclick = function () {
+//     myButton.classList.toggle("red");
+// }
+
+
+//#endregion
+
 
 
 
