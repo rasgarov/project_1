@@ -1004,11 +1004,161 @@
 //     myButton.classList.toggle("red");
 // }
 
+////7
+// const btn = document.querySelector("button");
+// btn.addEventListener("click", btnFunc)
+// function btnFunc(event) {//1
+//     event.target.textContent = "Rashid";
+// }
+// function btnFunc(e) {//2
+//     e.target.textContent = "Rashid";
+// }
+
+////8
+// var ulItems = document.querySelectorAll("button");
+// ulItems.forEach((item, index) => {
+//     item.addEventListener("click", addListen);
+// })
+// function addListen(e) {
+//     e.target.style.textDecoration = "line-through";
+//     ulItems.forEach((item, index) => {
+//         item.removeEventListener("click", addListen);
+//     })
+// }
+
+////9
+// var ulItems = document.querySelectorAll("button");
+// ulItems.forEach((item, index) => {
+//     item.addEventListener("click", addListen);
+// })
+// function addListen(e) {
+//     e.target.style.color = "gray";
+// }
+
+////10
+// document.body.addEventListener("keydown", (e) => {
+//     if (e.key == "Enter") {
+//         console.log("Enter is Pressed");
+//     }
+// })
+
+////11
+// msg,msgType,responseNotification
+// document.querySelector("form").addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     console.log(document.querySelector("#msg").value);
+//     console.log(document.querySelector("#msgType").value);
+//     console.log(document.querySelector("#responseNotification").checked);
+// })
+
 
 //#endregion
 
+//#region FORM Basics
 
 
+////1
+// const loginForm = document.querySelector("form");
+// loginForm.addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     const formData = new FormData(this);
+//     console.log(formData.get("username2"));
+//     console.log(formData.get("pass2"));
+// })
+
+////2
+// const loginForm = document.querySelector("form");
+// loginForm.addEventListener("submit", function (e) {
+//     e.preventDefault();
+//     // userPass length must be more than 5
+//     const data = new FormData(this);
+//     const pass = data.get("userPass");
+//     pass.length > 5 ? console.log("access is valid") : console.log("access denied");
+// })
+
+
+//#endregion
+
+//#region API JSON BASICS
+
+
+////1
+// fetch("https://api.genderize.io?name=luc")
+//     .then(res => res.json())
+//     .then(resp => {
+//         console.log(JSON.stringify(resp));
+//         console.log(resp['count'])
+//     })
+
+////2
+// const table = document.createElement("table");
+// table.setAttribute("id", "myTable");
+// table.innerHTML = `
+// <thead>
+// <th>From</th>
+// <th>To</th>
+// <th>Amount</th>
+// </thead>
+// <tbody id="table_body">
+
+// </tbody>
+// `;
+// document.body.append(table);
+// var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+// fetch("https://acb-api.algoritmika.org/api/transaction")
+//     .then(res => {
+//         return res.json();
+//     })
+//     .then(resp => {
+//         resp.forEach(element => {
+//             console.log(element);
+//             var newRow = `
+//            <tr>
+//            <td>${element.from}</td>
+//            <td>${element.to}</td>
+//            <td>${element.amount}</td>
+//            </tr>
+//            `;
+//             tableRef.innerHTML += newRow;
+//         });
+//     })
+//     .catch(error => {
+//         console.log(error.message);
+//     })
+
+////3
+////////3.1 GET
+// fetch("https://acb-api.algoritmika.org/api/transaction?from=Sam Stone&to=Joaquin Phoenix")
+//     .then(res => res.json())
+//     .then(result => {
+
+//         const rest = result[Math.floor(Math.random() * result.length)];
+//         console.log(rest);
+
+//     })
+
+////////3.2 POST
+// fetch("https://acb-api.algoritmika.org/api/transaction", {
+//     method: "POST",
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//         "from": "Rashid",
+//         "to": "Nane",
+//         "amount": 888
+//     })
+// })
+//     .then(res => res.json())
+//     .then(resp => console.log(resp))
+
+////////3.3
+
+
+
+
+
+//#endregion
 
 
 
