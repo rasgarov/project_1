@@ -1,4 +1,4 @@
-button{
+/* button{
     width:140px;
     padding: 20px;
     background-color: blue;
@@ -6,4 +6,8 @@ button{
 }
 .red{
     background-color: red;
+} */
+.shopping-list button{
+    border:none;
+    background: none;
 }
