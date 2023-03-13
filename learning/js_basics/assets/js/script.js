@@ -1152,13 +1152,59 @@
 //     .then(res => res.json())
 //     .then(resp => console.log(resp))
 
-////////3.3
+////////3.3 SECONDS TIMER
+// const headingThree = document.createElement("h3");
+// headingThree.innerText = Number(0);
+// document.body.append(headingThree);
+// setInterval(() => {
+//     headingThree.innerText = +headingThree.innerText + 1;
+// }, 1000)
+
+////////3.4
+// const url = "https://rickandmortyapi.com/api/character/";
+
+// function getRnMCaracter(pers_id) {
+//     if (pers_id == 0) {
+//         return Promise.reject("Rejected");
+//     } else {
+//         return fetch(url + pers_id);
+//     }
+// }
+// getRnMCaracter(0).then(res => res.json()).then(resp => console.log(resp)).catch(err => console.log(err));
+
+
+//#endregion
+
+//#region REACT, LIBRARY, FRAMEWORK, JSX, CODESANDBOX
+
+
+////1 fake api data async await
+// data={
+//     name:"Rashid",
+//     surname:"Asgarov"
+// }
+// function myFakeApi(){
+//     return new Promise(resolve=>{
+// setTimeout(()=>resolve(data),5000);
+//     })
+// }
+// async function getData(){
+//     const resp = await myFakeApi();
+//     console.log(resp);
+// }
+// getData();
+
+
+////2
+
+
+
+
+
 
 
 
 
 
 //#endregion
-
-
 
